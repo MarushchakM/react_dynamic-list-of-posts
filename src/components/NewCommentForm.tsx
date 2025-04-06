@@ -33,7 +33,7 @@ export const NewCommentForm: React.FC<Props> = ({ postId, setComments }) => {
     isError(name, setNameError);
     isError(email, setEmailError);
     isError(body, setBodyError);
-    if (nameError && emailError && bodyError) {
+    if (nameError || emailError || bodyError) {
       return;
     }
 
